@@ -23,3 +23,4 @@ else
 fi
 
 echo "finished installing font"
+exit 0

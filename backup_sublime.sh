@@ -59,3 +59,5 @@ else
         check_github
     done
 fi
+
+exit 0

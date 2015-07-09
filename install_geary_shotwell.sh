@@ -15,3 +15,5 @@ sudo apt-get update
 
 # 3. Install Geary
 sudo apt-get install geary shotwell
+
+exit 0

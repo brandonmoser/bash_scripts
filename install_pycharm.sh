@@ -62,3 +62,4 @@ extract_pycharm
 fix_vmoptions
 
 echo "DONE. Run the application the first time here: ``\$ $PYCHARM_BIN/pycharm.sh``"
+exit 0

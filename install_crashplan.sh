@@ -53,3 +53,4 @@ extract_file
 run_installer
 
 echo "DONE"
+exit 0

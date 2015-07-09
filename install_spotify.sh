@@ -20,3 +20,5 @@ sudo apt-get update
 
 # 4. Install Spotify
 sudo apt-get install spotify-client
+
+exit 0

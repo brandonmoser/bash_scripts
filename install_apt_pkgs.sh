@@ -10,3 +10,5 @@ fi
 sudo apt-get install git git-extras wget corebird meld filezilla firefox vim gksu \
                     indicator-stickynotes nodejs pgadmin3 postgresql redis-server \
                     remmina y-ppa-manager dconf-editor
+
+exit 0

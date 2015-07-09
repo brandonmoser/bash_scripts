@@ -12,3 +12,5 @@ echo "A control script is available here"
 echo "$ python dropbox.py"
 echo "with no arguments, usage will be displayed."
 echo "=============================================="
+
+exit 0

@@ -21,3 +21,4 @@ sudo apt-get update
 # 4. Install Spotify
 sudo apt-get install handbrake-gtk handbrake-cli
 
+exit 0

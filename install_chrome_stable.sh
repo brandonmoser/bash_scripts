@@ -48,3 +48,4 @@ fi
 install_chrome
 fix_dependencies
 echo "DONE"
+exit 0

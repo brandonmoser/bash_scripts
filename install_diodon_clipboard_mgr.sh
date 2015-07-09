@@ -18,3 +18,5 @@ sudo apt-get install diodon
 
 # and for all Unity users there is also a scope
 sudo apt-get install unity-scope-diodon
+
+exit 0
