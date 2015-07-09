@@ -61,4 +61,4 @@ download_pycharm
 extract_pycharm
 fix_vmoptions
 
-echo "DONE"
+echo "DONE. Run the application the first time here: ``\$ $PYCHARM_BIN/pycharm.sh``"
