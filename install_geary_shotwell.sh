@@ -14,4 +14,4 @@ sudo add-apt-repository ppa:yorba/ppa
 sudo apt-get update
 
 # 3. Install Geary
-sudo apt-get install geary
+sudo apt-get install geary shotwell
