@@ -17,12 +17,18 @@ fi
 download_pycharm() {
     echo "-------------------------------------------"
     cd $DOWNLOAD_DIR
-    wget $DOWNLOAD_LINK -O $PYCHARM_VER.tar.gz
-    chown brandonmoser:brandonmoser $PYCHARM_VER.tar.gz
+    if [ ! -f "$DOWNLOAD_DIR/$PYCHARM_VER.tar.gz" ]; then
+        echo "Downloading to $DOWNLOAD_DIR "
+        wget $DOWNLOAD_LINK -O $PYCHARM_VER.tar.gz
+        chown brandonmoser:brandonmoser $PYCHARM_VER.tar.gz
+    else
+        echo "$PYCHARM_VER.tar.gz exists, skipping download "
+    fi
     echo ""
 }
 
 extract_pycharm() {
+    echo "Extracting... "
     echo "-------------------------------------------"
     cd $DOWNLOAD_DIR
     tar -xzf $PYCHARM_VER.tar.gz
@@ -36,6 +42,7 @@ extract_pycharm() {
 }
 
 fix_vmoptions() {
+    echo "Updating VMOptions "
     echo "-------------------------------------------"
     rm -f $PYCHARM_BIN/pycharm.vmoptions
     rm -f $PYCHARM_BIN/pycharm64.vmoptions
@@ -50,18 +57,8 @@ echo "| Installing $PYCHARM_VER                          |"
 echo "===================================================="
 echo ""
 
-if [ ! -f "$DOWNLOAD_DIR/$PYCHARM_VER.tar.gz" ]; then
-    echo "Downloading to $DOWNLOAD_DIR "
-    download_pycharm
-else
-    echo "$PYCHARM_VER.tar.gz exists, skipping downloads "
-    echo ""
-fi
-
-echo "Extracting... "
+download_pycharm
 extract_pycharm
-
-echo "Updating VMOptions "
 fix_vmoptions
 
 echo "DONE"
