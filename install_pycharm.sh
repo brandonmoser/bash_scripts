@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PYCHARM_VER="pycharm-professional-4.5.2"
+PYCHARM_VER="pycharm-professional-4.5.3"
 DOWNLOAD_LINK="https://download.jetbrains.com/python/$PYCHARM_VER.tar.gz"
 DOWNLOAD_DIR="/home/brandonmoser/Downloads"
 SCRIPTS_DIR="$(pwd)"
