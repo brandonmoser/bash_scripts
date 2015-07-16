@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-PYCHARM_VER="pycharm-professional-4.5.3"
-DOWNLOAD_LINK="https://download.jetbrains.com/python/$PYCHARM_VER.tar.gz"
+PYCHARM_VER="4.5.3"
+DOWNLOAD_LINK="https://download.jetbrains.com/python/pycharm-professional-$PYCHARM_VER.tar.gz"
 DOWNLOAD_DIR="/home/$USER/Downloads"
 SCRIPTS_DIR="$(pwd)"
 INSTALL_DIR="/opt/pycharm"
@@ -17,12 +17,12 @@ fi
 download_pycharm() {
   echo "-------------------------------------------"
   cd $DOWNLOAD_DIR
-  if [ ! -f "$DOWNLOAD_DIR/$PYCHARM_VER.tar.gz" ]; then
-    echo "Downloading to $DOWNLOAD_DIR "
-    wget $DOWNLOAD_LINK -O $PYCHARM_VER.tar.gz
-    chown $USER:$USER $PYCHARM_VER.tar.gz
+  if [ ! -f "$DOWNLOAD_DIR/pycharm-professional-$PYCHARM_VER.tar.gz" ]; then
+      echo "Downloading to $DOWNLOAD_DIR "
+      wget $DOWNLOAD_LINK -O pycharm-professional-$PYCHARM_VER.tar.gz
+      chown $USER:$USER pycharm-professional-$PYCHARM_VER.tar.gz
   else
-      echo "$PYCHARM_VER.tar.gz exists, skipping download "
+      echo "pycharm-professional-$PYCHARM_VER.tar.gz exists, skipping download "
   fi
   echo ""
 }
@@ -31,8 +31,8 @@ extract_pycharm() {
   echo "Extracting... "
   echo "-------------------------------------------"
   cd $DOWNLOAD_DIR
-  tar -xzf $PYCHARM_VER.tar.gz
-  mv pycharm-4.5.2/ pycharm/
+  tar -xzf pycharm-professional-$PYCHARM_VER.tar.gz
+  mv pycharm-$PYCHARM_VER/ pycharm/
 
   if [ -d $INSTALL_DIR ]; then
       mv $INSTALL_DIR/ /opt/pycharm-old/
@@ -53,7 +53,7 @@ fix_vmoptions() {
 
 clear
 echo "===================================================="
-echo "| Installing $PYCHARM_VER                          |"
+echo "| Installing Pycharm $PYCHARM_VER                  |"
 echo "===================================================="
 echo ""
 
