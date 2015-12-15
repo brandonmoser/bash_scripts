@@ -3,7 +3,7 @@ clear
 
 CHROME="google-chrome-stable_current_amd64.deb"
 DOWNLOAD_LINK="https://dl.google.com/linux/direct/$CHROME"
-DOWNLOAD_DIR="/home/brandonmoser/Downloads"
+DOWNLOAD_DIR="/home/$USER/Downloads"
 SCRIPTS_DIR="$(pwd)"
 
 # Make sure only root can run this script

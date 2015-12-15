@@ -2,9 +2,10 @@
 clear
 
 BUILD="3083"
-DEB_PKG="sublime-text_build-$BUILD_amd64.deb"
+DEB_PKG="sublime-text_build-"$BUILD"_amd64.deb"
 DOWNLOAD_LINK="http://c758482.r82.cf2.rackcdn.com/$DEB_PKG"
-DOWNLOAD_DIR="/home/brandonmoser/Downloads"
+CURRENT_USER=`whoami`
+DOWNLOAD_DIR="/home/$CURRENT_USER/Downloads"
 SCRIPTS_DIR="$(pwd)"
 
 # Make sure only root can run this script

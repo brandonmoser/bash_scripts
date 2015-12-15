@@ -7,8 +7,7 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-sudo apt-get install git git-extras wget corebird meld filezilla firefox vim gksu \
-                    indicator-stickynotes nodejs pgadmin3 postgresql redis-server \
-                    remmina y-ppa-manager dconf-editor
+sudo apt-get install -y git git-extras wget meld filezilla firefox vim gksu \
+	nodejs pgadmin3 postgresql redis-server remmina dconf-editor
 
 exit 0

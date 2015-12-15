@@ -3,7 +3,7 @@
 # Reference: https://github.com/adobe-fonts/source-code-pro/issues/17#issuecomment-8967116
 
 INSTALL_LOC="user"
-INSTALL_DIR="~/.fonts/adobe-fonts/source-code-pro"
+INSTALL_DIR="/home/$USER/.fonts/adobe-fonts/source-code-pro"
 REPO="https://github.com/adobe-fonts/source-code-pro.git"
 
 if [ $1 = "system" ]; then
