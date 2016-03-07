@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 clear
 
+#http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3083_amd64.deb
 BUILD="3083"
-DEB_PKG="sublime-text_build-"$BUILD"_amd64.deb"
+echo $BUILD
+
+DEB_PKG="sublime-text_build-$BUILD_amd64.deb"
 DOWNLOAD_LINK="http://c758482.r82.cf2.rackcdn.com/$DEB_PKG"
-CURRENT_USER=`whoami`
-DOWNLOAD_DIR="/home/$CURRENT_USER/Downloads"
+DOWNLOAD_DIR="~/Downloads"
 SCRIPTS_DIR="$(pwd)"
 
 # Make sure only root can run this script
